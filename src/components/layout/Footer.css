@@ -1,12 +1,106 @@
 .footer {
+  background: var(--bg-dark);
+  border-top: 1px solid var(--border-dark);
+}
+
+/* ── INSTAGRAM STRIP ── */
+.footer__ig {
+  padding: 72px 80px 56px;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.footer__ig-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.footer__ig-eyebrow {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 10px;
+}
+
+.footer__ig-title {
+  font-family: var(--font-serif);
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.2;
+}
+
+.footer__ig-handle {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--gold-light);
+  white-space: nowrap;
+  transition: opacity 0.2s;
+  padding-bottom: 2px;
+}
+
+.footer__ig-handle:hover {
+  opacity: 0.7;
+}
+
+/* GRID */
+.footer__ig-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.footer__ig-post {
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  transition: transform 0.22s;
+}
+
+.footer__ig-post:hover {
+  transform: scale(1.02);
+}
+
+.footer__ig-post-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(28, 26, 23, 0);
+  transition: background 0.22s;
+}
+
+.footer__ig-post:hover .footer__ig-post-overlay {
+  background: rgba(28, 26, 23, 0.4);
+}
+
+.footer__ig-post-overlay svg {
+  width: 28px;
+  height: 28px;
+  color: rgba(247, 244, 239, 0);
+  transition: color 0.22s;
+}
+
+.footer__ig-post:hover .footer__ig-post-overlay svg {
+  color: rgba(247, 244, 239, 0.9);
+}
+
+/* ── BOTTOM BAR ── */
+.footer__bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 36px 80px;
-  background: var(--bg-dark);
-  border-top: 1px solid var(--border-dark);
+  padding: 32px 80px;
+  gap: 32px;
   flex-wrap: wrap;
-  gap: 20px;
+  border-bottom: 1px solid var(--border-dark);
 }
 
 .footer__logo {
@@ -15,46 +109,114 @@
   font-weight: 300;
   font-style: italic;
   color: var(--gold-light);
+  white-space: nowrap;
 }
 
 .footer__links {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   flex-wrap: wrap;
 }
+
 .footer__links a {
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(247,244,239,0.28);
+  color: rgba(247, 244, 239, 0.28);
   transition: color 0.2s;
 }
-.footer__links a:hover { color: rgba(247,244,239,0.6); }
+
+.footer__links a:hover {
+  color: rgba(247, 244, 239, 0.65);
+}
 
 .footer__social {
   display: flex;
   gap: 10px;
 }
-.footer__social a {
-  font-size: 10px;
-  letter-spacing: 0.1em;
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(247,244,239,0.4);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 7px 16px;
+  color: rgba(247, 244, 239, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
   border-radius: 2px;
   transition: border-color 0.2s, color 0.2s;
+  white-space: nowrap;
 }
-.footer__social a:hover {
+
+.footer__social-link svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.footer__social-link:hover {
   border-color: var(--gold-light);
   color: var(--gold-light);
 }
 
-@media (max-width: 768px) {
-  .footer {
+/* COPYRIGHT */
+.footer__copy {
+  padding: 16px 80px;
+  font-size: 11px;
+  color: rgba(247, 244, 239, 0.18);
+  letter-spacing: 0.06em;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .footer__ig {
+    padding: 56px 40px 40px;
+  }
+
+  .footer__bar {
+    padding: 28px 40px;
     flex-direction: column;
     align-items: flex-start;
-    padding: 36px 24px;
-    gap: 24px;
   }
+
+  .footer__copy {
+    padding: 16px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__ig {
+    padding: 48px 24px 36px;
+  }
+
+  .footer__ig-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__ig-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__bar {
+    padding: 28px 24px;
+  }
+
+  .footer__copy {
+    padding: 16px 24px;
+  }
+
+  .footer__ig-title {
+    font-size: 24px;
+  }
+}
+
+.footer__ig-post-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }

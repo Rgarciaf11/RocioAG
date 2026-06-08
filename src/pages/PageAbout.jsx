@@ -4,7 +4,6 @@ export default function PageAbout() {
   return (
     <div className="page-about">
 
-      {/* HERO */}
       <section className="pa-hero">
         <div className="pa-hero__text">
           <p className="eyebrow">Sobre mí</p>
@@ -17,17 +16,10 @@ export default function PageAbout() {
           </p>
         </div>
         <div className="pa-hero__img">
-          <div className="pa-hero__img-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-              <circle cx="12" cy="8" r="4" />
-              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-            </svg>
-            <span>Foto de Rocío Riquelme</span>
-          </div>
+          <img src="/src/img/FotoRocio.jpg" alt="Rocío Riquelme" className="pa-hero__img-real" />
         </div>
       </section>
 
-      {/* BIO */}
       <section className="pa-bio">
         <div className="pa-bio__quote">
           <blockquote>
@@ -57,7 +49,6 @@ export default function PageAbout() {
         </div>
       </section>
 
-      {/* MEG */}
       <section className="pa-meg">
         <div className="pa-meg__content">
           <p className="eyebrow">Delegada</p>
@@ -70,15 +61,14 @@ export default function PageAbout() {
           </p>
         </div>
         <div className="pa-meg__gallery">
-          {[1,2,3,4].map(i => (
+          {['MujeresGastronomia.jpg', 'MujeresGastronomia2.jpg', 'MujeresGastronomia3.jpg', 'MujeresGastronomia4.jpg'].map((img, i) => (
             <div key={i} className="pa-meg__photo">
-              <span>Foto evento {i}</span>
+              <img src={`/src/img/${img}`} alt={`Evento Mujeres en Gastronomía ${i + 1}`} />
             </div>
           ))}
         </div>
       </section>
 
-      {/* VALUES */}
       <section className="pa-values">
         <p className="eyebrow pa-values__eyebrow">Mis valores</p>
         <h2 className="pa-values__title">Lo que llevo a cada proyecto</h2>

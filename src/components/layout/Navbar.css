@@ -81,3 +81,7 @@
   .navbar__cta { display: none; }
   .navbar__burger { display: flex; }
 }
+
+.navbar__link--active {
+  color: var(--gold) !important;
+}

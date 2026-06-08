@@ -6,41 +6,23 @@
 
 /* IMAGE COL */
 .about__img-col {
-  background: #e8e0d2;
   position: relative;
   min-height: 560px;
-  display: flex;
-  align-items: flex-end;
-  padding: 44px;
-  overflow: hidden;
+  background: #e8e0d2;
 }
 
-.about__img-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-}
-
-.about__img-icon {
-  width: 52px;
-  height: 52px;
-  color: rgba(28,26,23,0.25);
-}
-
-.about__img-label {
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(28,26,23,0.28);
+.about__img-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .about__badge {
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 10;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -49,11 +31,12 @@
   letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--gold);
-  border: 1px solid rgba(176,125,58,0.35);
+  border: 1px solid rgba(176, 125, 58, 0.35);
   padding: 8px 16px;
-  background: rgba(247,244,239,0.9);
+  background: rgba(247, 244, 239, 0.92);
   border-radius: 2px;
 }
+
 .about__badge-dot {
   width: 5px;
   height: 5px;
@@ -70,7 +53,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0;
 }
 
 .about__text .eyebrow {
@@ -87,7 +69,7 @@
   font-size: 22px;
   font-style: italic;
   font-weight: 300;
-  color: rgba(176,125,58,0.8);
+  color: rgba(176, 125, 58, 0.8);
   line-height: 1.5;
   margin: 28px 0;
   padding-left: 20px;
@@ -101,7 +83,11 @@
   line-height: 1.9;
   margin-bottom: 16px;
 }
-.about__body:last-of-type { margin-bottom: 0; }
+
+.about__body:last-of-type {
+  margin-bottom: 0;
+}
+
 .about__body strong {
   color: var(--text);
   font-weight: 500;
@@ -113,11 +99,25 @@
 }
 
 @media (max-width: 900px) {
-  .about { grid-template-columns: 1fr; }
-  .about__img-col { min-height: 320px; }
-  .about__text { padding: 48px 40px; }
-  .about__title { font-size: 32px; }
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about__img-col {
+    min-height: 320px;
+  }
+
+  .about__text {
+    padding: 48px 40px;
+  }
+
+  .about__title {
+    font-size: 32px;
+  }
 }
+
 @media (max-width: 600px) {
-  .about__text { padding: 40px 24px; }
+  .about__text {
+    padding: 40px 24px;
+  }
 }

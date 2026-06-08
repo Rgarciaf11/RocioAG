@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 55% 45%;
   min-height: 600px;
-  margin-top: 65px; /* navbar height */
+  margin-top: 0;
   border-bottom: 1px solid var(--border);
 }
 
