@@ -1,0 +1,115 @@
+.ig-section {
+  padding: var(--section-pad);
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+}
+
+.ig-section__header {
+  margin-bottom: 40px;
+}
+
+.ig-section__title-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.ig-section__title {
+  font-size: 36px;
+  margin-top: 14px;
+}
+
+.ig-section__handle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+  padding-bottom: 4px;
+}
+.ig-section__handle:hover { opacity: 0.75; }
+
+.ig-section__handle-arrow {
+  font-size: 14px;
+}
+
+.ig-section__sub {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-muted);
+}
+
+/* GRID */
+.ig-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.ig-post {
+  aspect-ratio: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  transition: transform 0.22s;
+}
+.ig-post:hover { transform: scale(1.02); }
+
+.ig-post__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28,26,23,0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.22s;
+}
+.ig-post:hover .ig-post__overlay {
+  background: rgba(28,26,23,0.35);
+}
+
+.ig-post__icon {
+  width: 28px;
+  height: 28px;
+  color: rgba(247,244,239,0);
+  transition: color 0.22s;
+}
+.ig-post:hover .ig-post__icon {
+  color: rgba(247,244,239,0.9);
+}
+
+.ig-post__label {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(247,244,239,0);
+  transition: color 0.22s;
+}
+.ig-post:hover .ig-post__label {
+  color: rgba(247,244,239,0.8);
+}
+
+.ig-section__footer {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .ig-section { padding: var(--section-pad-sm); }
+  .ig-grid { grid-template-columns: repeat(2, 1fr); }
+  .ig-section__title-row { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 600px) {
+  .ig-section__title { font-size: 28px; }
+}
