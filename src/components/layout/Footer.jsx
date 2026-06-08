@@ -37,7 +37,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="footer__ig-post"
             >
-              <img src={`/src/img/${post.img}`} alt="Post de Instagram" className="footer__ig-post-img" />
+              <img src={`/img/${post.img}`} alt="Post de Instagram" className="footer__ig-post-img" />
               <div className="footer__ig-post-overlay">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <rect x="2" y="2" width="20" height="20" rx="5" />

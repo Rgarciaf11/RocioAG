@@ -16,7 +16,7 @@ export default function PageAbout() {
           </p>
         </div>
         <div className="pa-hero__img">
-          <img src="/src/img/FotoRocio.jpg" alt="Rocío Riquelme" className="pa-hero__img-real" />
+          <img src="/img/FotoRocio.jpg" alt="Rocío Riquelme" className="pa-hero__img-real" />
         </div>
       </section>
 
@@ -63,7 +63,7 @@ export default function PageAbout() {
         <div className="pa-meg__gallery">
           {['MujeresGastronomia.jpg', 'MujeresGastronomia2.jpg', 'MujeresGastronomia3.jpg', 'MujeresGastronomia4.jpg'].map((img, i) => (
             <div key={i} className="pa-meg__photo">
-              <img src={`/src/img/${img}`} alt={`Evento Mujeres en Gastronomía ${i + 1}`} />
+              <img src={`/img/${img}`} alt={`Evento Mujeres en Gastronomía ${i + 1}`} />
             </div>
           ))}
         </div>

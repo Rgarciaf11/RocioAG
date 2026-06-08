@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section className="about" id="sobre-mi">
       <div className="about__img-col">
-        <img src="/src/img/FotoRocio.jpg" alt="Rocío Riquelme" className="about__img-real" />
+        <img src="/img/FotoRocio.jpg" alt="Rocío Riquelme" className="about__img-real" />
         <div className="about__badge">
           <span className="about__badge-dot" />
           Delegada · Mujeres en Gastronomía
