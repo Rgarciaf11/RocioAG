@@ -47,7 +47,7 @@ export default function PageContacto() {
                 </div >
 
                 <div className="pc2-hero__img">
-                    <img src="/img/QuieroHablarConRocio.jpg" alt="Contactar con Rocío Riquelme" />
+                    <img src="/img/Rocio5.jpg" alt="Contactar con Rocío Riquelme" />
                 </div>
             </section >
 
