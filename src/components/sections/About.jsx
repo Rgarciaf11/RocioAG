@@ -4,11 +4,7 @@ export default function About() {
   return (
     <section className="about" id="sobre-mi">
       <div className="about__img-col">
-        <img src="/img/FotoRocio.jpg" alt="Rocío Riquelme" className="about__img-real" />
-        <div className="about__badge">
-          <span className="about__badge-dot" />
-          Delegada · Mujeres en Gastronomía
-        </div>
+        <img src="/img/Rocio3.jpg" alt="Rocío Riquelme" className="about__img-real" />
       </div>
 
       <div className="about__text">

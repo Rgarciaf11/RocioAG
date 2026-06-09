@@ -1,11 +1,12 @@
 import './PageServices.css'
+import { Link } from 'react-router-dom'
 
 const SERVICES = [
   {
     num: '01',
     name: 'Gestión y administración de restaurantes',
     desc: 'Tendrás los conocimientos y herramientas necesarias para gestionar y administrar todas las áreas de tu restaurante. Conseguirás reducir costes, optimizar tu gestión de proveedores, contar con un equipo alineado a tu filosofía y tendrás más clientes.',
-    img: 'GestioyAdministracionRestaurantes.jpg',
+    img: 'GestionyAdministracionRestaurantes.jpg',
   },
   {
     num: '02',
@@ -101,9 +102,6 @@ export default function PageServices() {
             conseguirás que tu negocio sea<br />
             <em>óptimo y rentable.</em>
           </h1>
-          <a href="/#contacto" className="btn-dark ps-hero__cta">
-            Empezar ahora
-          </a>
         </div>
         <div className="ps-hero__panel">
           <div className="ps-hero__panel-bg" />
@@ -148,7 +146,7 @@ export default function PageServices() {
         <p className="ps-cta__sub">
           Una llamada de 30 minutos para ver cómo puedo ayudarte. Sin compromisos.
         </p>
-        <a href="/#contacto" className="btn-dark">Contactar con Rocío</a>
+        <Link to="/contacto" className="btn-dark">Contactar con Rocío →</Link>
       </section>
 
     </div>

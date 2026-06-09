@@ -1,4 +1,5 @@
 import './Hero.css'
+import { Link } from 'react-router-dom'
 
 export default function Hero() {
   return (
@@ -23,7 +24,7 @@ export default function Hero() {
             Para hosteleros que quieren dejar de sobrevivir y empezar a crecer.
           </p>
           <div className="hero__btns">
-            <a href="#contacto" className="btn-dark">Empezar ahora</a>
+            <Link to="/contacto" className="btn-dark">Empezar ahora</Link>
             <a href="#servicios" className="btn-ghost">Ver servicios →</a>
           </div>
         </div>

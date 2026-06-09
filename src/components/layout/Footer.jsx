@@ -61,7 +61,7 @@ export default function Footer() {
           <li><a href="/servicios">Servicios</a></li>
           <li><a href="/sobre-mi">Sobre mí</a></li>
           <li><a href="/colaboraciones">Colaboraciones</a></li>
-          <li><a href="/#contacto">Contacto</a></li>
+          <li><a href="/contacto">Contacto</a></li>
           <li><a href="/privacidad">Privacidad</a></li>
           <li><a href="/cookies">Cookies</a></li>
         </ul>

@@ -1,0 +1,261 @@
+/* APARICIONES */
+.pp-apariciones {
+    padding: var(--section-pad);
+    border-bottom: 1px solid var(--border);
+}
+
+.pp-apariciones__header {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 48px;
+}
+
+.pp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.pp-card {
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+}
+
+.pp-card__img {
+    position: relative;
+    aspect-ratio: 3/2;
+    overflow: hidden;
+    background: #e8e0d2;
+}
+
+.pp-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.pp-card:hover .pp-card__img img {
+    transform: scale(1.04);
+}
+
+.pp-card__tipo {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(247, 244, 239, 0.92);
+    padding: 4px 10px;
+    border-radius: 2px;
+}
+
+.pp-card__body {
+    padding: 24px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.pp-card__titulo {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--text);
+    line-height: 1.3;
+}
+
+.pp-card__desc {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* JURADO */
+.pp-jurado {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border);
+}
+
+.pp-jurado__img {
+    overflow: hidden;
+    background: #e8e0d2;
+    min-height: 480px;
+}
+
+.pp-jurado__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pp-jurado__text {
+    padding: 72px 72px;
+    background: var(--bg-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+}
+
+.pp-jurado__text .eyebrow {
+    color: var(--gold-light);
+    margin-bottom: 16px;
+}
+
+.pp-jurado__title {
+    font-family: var(--font-serif);
+    font-size: 38px;
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.2;
+    margin-bottom: 36px;
+}
+
+.pp-jurado__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pp-jurado__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(247, 244, 239, 0.6);
+    line-height: 1.7;
+}
+
+.pp-jurado__dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold-light);
+    flex-shrink: 0;
+    margin-top: 7px;
+}
+
+/* CTA */
+.pp-cta {
+    padding: 100px 80px;
+    text-align: center;
+    background: var(--bg-alt);
+}
+
+.pp-cta__eyebrow {
+    margin-bottom: 20px;
+}
+
+.pp-cta__title {
+    font-family: var(--font-serif);
+    font-size: 46px;
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.pp-cta__sub {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-muted);
+    max-width: 440px;
+    margin: 0 auto 40px;
+    line-height: 1.75;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .pp-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .pp-hero__text {
+        padding: 56px 40px;
+    }
+
+    .pp-hero__title {
+        font-size: 42px;
+    }
+
+    .pp-hero__img {
+        min-height: 300px;
+    }
+
+    .pp-apariciones {
+        padding: var(--section-pad-sm);
+    }
+
+    .pp-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pp-jurado {
+        grid-template-columns: 1fr;
+    }
+
+    .pp-jurado__img {
+        min-height: 280px;
+    }
+
+    .pp-jurado__text {
+        padding: 56px 40px;
+    }
+
+    .pp-jurado__title {
+        font-size: 32px;
+    }
+
+    .pp-cta {
+        padding: 72px 40px;
+    }
+
+    .pp-cta__title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pp-hero__text {
+        padding: 48px 24px;
+    }
+
+    .pp-hero__title {
+        font-size: 34px;
+    }
+
+    .pp-apariciones {
+        padding: 48px 24px;
+    }
+
+    .pp-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pp-jurado__text {
+        padding: 48px 24px;
+    }
+
+    .pp-cta {
+        padding: 60px 24px;
+    }
+
+    .pp-cta__title {
+        font-size: 28px;
+    }
+}

@@ -3,15 +3,17 @@ import { Link, useLocation } from 'react-router-dom'
 import './Navbar.css'
 
 const NAV_LINKS = [
-  { to: '/servicios',      label: 'Servicios' },
-  { to: '/sobre-mi',       label: 'Sobre mí' },
+  { to: '/servicios', label: 'Servicios' },
+  { to: '/prensa', label: 'Prensa' },
+  { to: '/experiencias', label: 'Experiencias' },
+  { to: '/catering', label: 'Catering' },
   { to: '/colaboraciones', label: 'Colaboraciones' },
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled]   = useState(false)
-  const [menuOpen, setMenuOpen]   = useState(false)
-  const { pathname }              = useLocation()
+  const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const { pathname } = useLocation()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -19,13 +21,12 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Close menu on route change
   useEffect(() => { setMenuOpen(false) }, [pathname])
 
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <Link to="/" className="navbar__logo">
-        Adelante <em>Gastronómica</em>
+        <img src="/img/logo.gif" alt="Adelante Gastronómica" className="navbar__logo-img" />
       </Link>
 
       <ul className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
@@ -41,7 +42,7 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <Link to="/#contacto" className="navbar__cta btn-dark">
+      <Link to="/contacto" className="navbar__cta btn-dark">
         Contactar
       </Link>
 

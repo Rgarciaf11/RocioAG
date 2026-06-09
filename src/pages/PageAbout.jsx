@@ -1,4 +1,5 @@
 import './PageAbout.css'
+import { Link } from 'react-router-dom'
 
 export default function PageAbout() {
   return (
@@ -45,7 +46,7 @@ export default function PageAbout() {
             por la gastronomía. Si has llegado hasta aquí es porque eres uno de ellos.
             <strong> ¿Empezamos?</strong>
           </p>
-          <a href="/#contacto" className="btn-dark pa-bio__cta">Hablamos →</a>
+          <Link to="/contacto" className="btn-dark">Hablamos</Link>
         </div>
       </section>
 
