@@ -34,9 +34,9 @@ export default function App() {
           <Route path="/catering" element={<PageCatering />} />
           <Route path="/contacto" element={<PageContacto />} />
           <Route path="/aviso-legal" element={<PageAvisoLegal />} />
-a         <Route path="/cookies" element={<PageCookies />} />
+          <Route path="/cookies" element={<PageCookies />} />
           <Route path="/privacidad" element={<PagePrivacidad />} />
-          
+
         </Routes>
       </Layout>
     </BrowserRouter>
