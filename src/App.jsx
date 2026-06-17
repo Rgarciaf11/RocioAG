@@ -9,6 +9,7 @@ import PagePrensa from './pages/PagePrensa'
 import PageExperiencias from './pages/PageExperiencias'
 import PageCatering from './pages/PageCatering'
 import PageContacto from './pages/PageContacto'
+import PageAvisoLegal from './pages/PageAvisoLegal'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/experiencias" element={<PageExperiencias />} />
           <Route path="/catering" element={<PageCatering />} />
           <Route path="/contacto" element={<PageContacto />} />
+          <Route path="/aviso-legal" element={<PageAvisoLegal />} />
         </Routes>
       </Layout>
     </BrowserRouter>

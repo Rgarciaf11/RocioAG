@@ -59,7 +59,7 @@ export default function PageContacto() {
 
                 <form
                     className="pc2-form__form"
-                    action="https://formspree.io/f/TUCODIGO"
+                    action="https://formspree.io/f/xpqeeydv"
                     method="POST"
                 >
                     <div className="pc2-form__row">
