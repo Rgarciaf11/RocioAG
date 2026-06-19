@@ -29,24 +29,7 @@ export default function Footer() {
         </div>
 
         <div className="footer__ig-grid">
-          {IG_POSTS.map(post => (
-            <a
-              key={post.id}
-              href="https://www.instagram.com/adelantegastronomica/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer__ig-post"
-            >
-              <img src={`/img/${post.img}`} alt="Post de Instagram" className="footer__ig-post-img" />
-              <div className="footer__ig-post-overlay">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <rect x="2" y="2" width="20" height="20" rx="5" />
-                  <circle cx="12" cy="12" r="5" />
-                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-                </svg>
-              </div>
-            </a>
-          ))}
+          <behold-widget feed-id="v4V9Ovia65KFHoiUTXFo"></behold-widget>
         </div>
       </div>
 

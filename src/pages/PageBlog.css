@@ -186,6 +186,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-top: 1px solid var(--border);
+  direction: rtl;
 }
 
 .pb-colaborar__img {
@@ -201,10 +202,15 @@
   display: block;
 }
 
+.pb-colaborar__img,
+.pb-colaborar__text {
+  direction: ltr;
+}
+
 .pb-colaborar__text {
   padding: 72px 68px;
   background: var(--bg-card);
-  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -319,5 +325,9 @@
 
   .pb-colaborar__title {
     font-size: 28px;
+  }
+
+  .pb-colab:nth-of-type(3) .pb-colab__body {
+    padding: 100px 60px;
   }
 }

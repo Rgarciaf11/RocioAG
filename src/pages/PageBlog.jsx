@@ -44,6 +44,15 @@ const COLABORACIONES = [
     cta: 'Reservar plaza',
     url: 'https://nombredemujer.es/event/taller-alimentacion-complementaria-blw-3/',
   },
+  {
+    id: 'meg',
+    tag: 'Asociación',
+    title: 'Mujeres en Gastronomía',
+    body: 'Mujeres en Gastronomía (MEG) es una asociación que trabaja por la visibilidad e igualdad de las mujeres en el sector gastronómico. Rocío Riquelme forma parte de esta iniciativa como delegada, impulsando la presencia femenina en la hostelería y contribuyendo a crear un sector más igualitario y diverso.',
+    imgs: ['CongresoMujeresEnGastronomia.jpg'],
+    cta: 'Más info',
+    url: 'https://mujeresengastronomia.com',
+  },
 ]
 
 export default function PageBlog() {
@@ -124,6 +133,28 @@ export default function PageBlog() {
             {COLABORACIONES[1].cta} →
           </a>
         </div >
+      </article >
+
+      {/* COLABORACIÓN 3 — MEG */}
+      <article className="pb-colab">
+        <div className="pb-colab__imgs">
+          {COLABORACIONES[2].imgs.map((img, i) => (
+            <img key={i} src={`/img/${img}`} alt={`${COLABORACIONES[2].title} ${i + 1}`} />
+          ))}
+        </div>
+        <div className="pb-colab__body">
+          <span className="pb-colab__tag">{COLABORACIONES[2].tag}</span>
+          <h2 className="pb-colab__title">{COLABORACIONES[2].title}</h2>
+          <p className="pb-colab__text">{COLABORACIONES[2].body}</p>
+          <a
+            href={COLABORACIONES[2].url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-dark pb-colab__cta"
+          >
+            {COLABORACIONES[2].cta} →
+          </a>
+        </div>
       </article >
 
       {/* CÓMO COLABORAR — al final */}

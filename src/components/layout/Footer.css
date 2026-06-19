@@ -49,9 +49,7 @@
 
 /* GRID */
 .footer__ig-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  width: 100%;
 }
 
 .footer__ig-post {
@@ -219,4 +217,9 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+behold-widget {
+  display: block;
+  width: 100%;
 }
